@@ -27,7 +27,7 @@ function App() {
     atualizarSaldo(await api.buscaSaldo());
   }
 
-  function realizarTransacao(valores) {  
+  function realizarTransacao(valores) {
     const novoSaldo = calcularNovoSaldo(valores, saldo);
 
     api.atualizaSaldo(novoSaldo).catch((error) => console.error(error))
